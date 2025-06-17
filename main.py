@@ -1,14 +1,19 @@
-class student:
-     def __init__(self, name, marks):
-       self.name = name
-       self.marks= marks
-  
-     def display(self):
-          print(f"Name:{self.name},Marks:{self.marks}")
+from typing import Counter
 
-if __name__== "__main__":
- student1 = student("samra", 95)
- student1.display() 
 
-     
+class Counter:
+    count = 0
+    
+    def __init__(self):
+        Counter.count +=1
+        
+    @classmethod
+    def show_count(cls):
+     print(f"Total objects created: {cls.count}")
 
+if __name__ == "__main__":
+ obj1 = Counter()
+ obj2 = Counter()
+ obj3 = Counter()
+Counter.show_count()
+    
